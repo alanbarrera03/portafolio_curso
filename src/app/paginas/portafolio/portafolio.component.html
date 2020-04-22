@@ -2,7 +2,7 @@
 
       <!-- 1 -->
 
-    <div align="center" *ngIf="productosService.cargando">
+    <div align="center" *ngIf="productosService.cargado">
         <h2>Cargando...</h2>
 
         <div class="loader loader--style1" title="0">
@@ -30,7 +30,7 @@
     </div>
 
 
-      <div *ngIf="!productosService.cargando"
+      <div *ngIf="!productosService.cargado"
       class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
         <a *ngFor="let producto of productosService.producto"
         [routerLink] = "['/item', producto.cod ]" class="animated fadeIn rk-item ae-masonry__item">
